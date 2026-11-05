@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b6b35">
+<title>St. Mary's Secondary School Sanje</title>
+
+<style>
+:root {
+ --primary:#0b6b35;
+ --dark:#06451f;
+ --gold:#ffc107;
+ --light:#f4fff7;
+ --white:#fff;
+ --text:#222;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+header{background:var(--primary);color:white;padding:15px;text-align:center}
+.school-header{display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap}
+.school-header img{width:85px;height:85px;object-fit:contain;background:white;border-radius:50%;padding:5px}
+.school-header h1{font-size:25px}
+.motto{color:var(--gold);font-weight:bold;letter-spacing:1px}
+nav{background:var(--dark);display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:1000}
+nav a{color:white;text-decoration:none;padding:12px;font-weight:bold;font-size:14px}
+nav a:hover{background:var(--gold);color:black}
+.hero{min-height:380px;background:linear-gradient(#0009,#0009),url("school-photo1.jpg") center/cover no-repeat;color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+.hero h2{font-size:36px}
+.hero a,.btn{display:inline-block;margin:8px 4px;padding:11px 18px;background:var(--gold);color:#111;text-decoration:none;border:0;border-radius:5px;font-weight:bold;cursor:pointer}
+section{padding:40px 20px;max-width:1100px;margin:auto}
+section h2{text-align:center;color:var(--primary);margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card,.contact-box{background:white;padding:20px;border-radius:10px;box-shadow:0 3px 12px #0001}
+.card h3{color:var(--primary)}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+table{width:100%;border-collapse:collapse;background:white;margin:15px 0}
+th,td{border:1px solid #ccc;padding:10px;text-align:left}
+th{background:var(--primary);color:white}
+.news-item{background:white;padding:18px;margin-bottom:15px;border-left:5px solid var(--gold);border-radius:5px}
+.pinned{border-left-color:#d19b00;background:#fffbea}
+footer{background:var(--dark);color:white;text-align:center;padding:25px}
+footer p{margin:5px}
+.floating-whatsapp{position:fixed;bottom:22px;right:20px;width:60px;height:60px;background:#25D366;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px #0005;z-index:9999;text-decoration:none;font-size:32px}
+input,select,textarea{width:100%;padding:11px;margin:6px 0 13px;border:1px solid #bbb;border-radius:5px;font:inherit}
+textarea{min-height:85px}
+button{font:inherit}
+.admin-panel{background:#fff;padding:20px;border-radius:10px;box-shadow:0 3px 12px #0001;margin:15px 0}
+.admin-panel h3{color:var(--primary)}
+.hidden{display:none!important}
+.status{padding:10px;background:#e9f5ec;border-radius:5px;margin:10px 0}
+.danger{background:#a52222;color:white}
+.small{font-size:13px;color:#666}
+.download{color:var(--primary);font-weight:bold}
+@media(max-width:600px){
+ .school-header h1{font-size:19px}
+ .hero h2{font-size:26px}
+ nav a{padding:9px;font-size:12px}
+ section{padding:30px 14px}
+ table{font-size:12px}
+ th,td{padding:7px 4px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="school-header">
+  <img src="school-logo.png" alt="School Logo">
+  <div>
+   <h1>ST. MARY'S SECONDARY SCHOOL SANJE</h1>
+   <p class="motto">HE WHO STRUGGLES WINS</p>
+  </div>
+ </div>
+</header>
+
+<nav>
+ <a href="#home">Home</a>
+ <a href="#about">About</a>
+ <a href="#academics">Academics</a>
+ <a href="#uniform">Uniform</a>
+ <a href="#fees">Fees</a>
+ <a href="#timetable">Timetables</a>
+ <a href="#exams">Examinations</a>
+ <a href="#gallery">Gallery</a>
+ <a href="#news">News</a>
+ <a href="#contact">Contact</a>
+ <a href="#admin">Admin</a>
+</nav>
+
+<div class="hero" id="home">
+ <div>
+  <h2>WELCOME TO ST. MARY'S SECONDARY SCHOOL SANJE</h2>
+  <p>Committed to academic excellence, discipline and character development.</p>
+  <a href="#about">Discover Our School</a>
+ </div>
+</div>
+
+<section id="about">
+ <h2>ABOUT OUR SCHOOL</h2>
+ <p>St. Mary's Secondary School Sanje is committed to providing quality education and developing responsible, disciplined and hardworking students.</p>
+ <p>We believe in academic excellence, moral values, discipline, teamwork and the development of every learner.</p>
+ <div class="cards">
+  <div class="card"><h3>Our Vision</h3><p>To develop responsible and successful learners who contribute positively to society.</p></div>
+  <div class="card"><h3>Our Mission</h3><p>To provide quality education and promote academic, moral and personal development.</p></div>
+  <div class="card"><h3>Our Motto</h3><p><strong>HE WHO STRUGGLES WINS</strong></p></div>
+ </div>
+</section>
+
+<section id="academics">
+ <h2>ACADEMICS</h2>
+ <div class="cards">
+  <div class="card"><h3>Lower Secondary</h3><p>Senior One</p><p>Senior Two</p><p>Senior Three</p><p>Senior Four</p></div>
+  <div class="card"><h3>Upper Secondary</h3><p>Senior Five</p><p>Senior Six</p></div>
+  <div class="card"><h3>Academic Excellence</h3><p>We encourage hard work, commitment, discipline and continuous improvement.</p></div>
+ </div>
+</section>
+
+<section id="uniform">
+ <h2>SCHOOL UNIFORM</h2>
+ <p style="text-align:center">Our school uniform promotes identity, unity and discipline.</p>
+ <div class="cards">
+  <div class="card"><img src="boys-uniform.jpg" alt="Boys Uniform"><h3>Boys' Uniform</h3></div>
+  <div class="card"><img src="girls-uniform.jpg" alt="Girls Uniform"><h3>Girls' Uniform</h3></div>
+ </div>
+</section>
+
+<section id="fees">
+ <h2>SCHOOL FEES STRUCTURE</h2>
+ <p>Official school fees information for Day and Boarding students will be published here.</p>
+ <div id="fees-list" class="cards">
+  <p>Fees information will appear here when published by the school.</p>
+ </div>
+ <h3>DEES STATUS, UPDATES AND REQUIREMENTS</h3>
+ <div id="dees-list" class="card">Official DEES updates and requirements will appear here.</div>
+</section>
+
+<section id="timetable">
+ <h2>CLASS TIMETABLES</h2>
+ <p>Choose your class and stream to view the timetable published by the school.</p>
+ <label for="class-filter">Class</label>
+ <select id="class-filter">
+  <option value="">All classes</option>
+  <option>S1</option><option>S2</option><option>S3</option>
+  <option>S4</option><option>S5</option><option>S6</option>
+ </select>
+ <label for="stream-filter">Stream</label>
+ <select id="stream-filter">
+  <option value="">All streams</option>
+  <option>Green</option><option>Blue</option>
+  <option>Yellow</option><option>White</option>
+  <option>General</option>
+ </select>
+ <div id="timetable-list" class="cards">
+  <p>Official class timetables will appear here.</p>
+ </div>
+</section>
+
+<section id="exams">
+ <h2>EXAMINATIONS AND TESTS</h2>
+ <p>Students can access examination papers and tests published by the school.</p>
+ <div id="exam-list">
+  <p>Examination papers will appear here when published.</p>
+ </div>
+</section>
+
+<section id="gallery">
+ <h2>SCHOOL GALLERY</h2>
+ <div class="gallery">
+  <img src="school-photo1.jpg" alt="School Photo 1">
+  <img src="school-photo2.jpg" alt="School Photo 2">
+  <img src="school-photo3.jpg" alt="School Photo 3">
+  <img src="school-photo4.jpg" alt="School Photo 4">
+ </div>
+</section>
+
+<section id="news">
+ <h2>NEWS AND ANNOUNCEMENTS</h2>
+ <div id="news-list">
+  <div class="news-item">
+   <h3>Welcome to Our School Website</h3>
+   <p>Welcome to the official website of St. Mary's Secondary School Sanje.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>CONTACT US</h2>
+ <div class="contact-box">
+  <h3>St. Mary's Secondary School Sanje</h3>
+  <p>Phone: <a href="tel:+256748098496">+256 748 098 496</a></p>
+  <p>Phone: <a href="tel:+256765840578">0765 840 578</a></p>
+  <p>Email: <a href="mailto:citykong01@gmail.com">citykong01@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/256748098496" target="_blank" rel="noopener">Chat with the school</a></p>
+ </div>
+</section>
+
+<section id="admin">
+ <h2>ADMINISTRATOR PORTAL</h2>
+ <div class="admin-panel" id="login-panel">
+  <h3>Administrator Login</h3>
+  <p>Authorised school administrators only.</p>
+  <label>Email address</label>
+  <input id="login-email" type="email" placeholder="Administrator email">
+  <label>Password</label>
+  <input id="login-password" type="password" placeholder="Password">
+  <button class="btn" id="login-btn">Sign in</button>
+  <p id="login-message" class="small" aria-live="polite"></p>
+ </div>
+
+ <div class="admin-panel hidden" id="dashboard">
+  <h3>School Administration Dashboard</h3>
+  <p id="admin-welcome"></p>
+  <p id="admin-role" class="status"></p>
+  <button class="btn danger" id="logout-btn">Log out</button>
+
+  <div id="fees-admin" class="admin-panel hidden">
+   <h3>Manage Fees and DEES</h3>
+   <label>Class</label>
+   <select id="fee-class">
+    <option>S1</option><option>S2</option><option>S3</option>
+    <option>S4</option><option>S5</option><option>S6</option>
+   </select>
+   <label>Student category</label>
+   <select id="fee-category"><option>Day</option><option>Boarding</option></select>
+   <label>Term / Year</label>
+   <input id="fee-term" placeholder="e.g. Term 1, 2027">
+   <label>Amount (UGX)</label>
+   <input id="fee-amount" type="number" min="0" placeholder="Enter amount">
+   <label>Other fees / details</label>
+   <textarea id="fee-details" placeholder="Enter fee details"></textarea>
+   <label>DEES status and updates</label>
+   <textarea id="fee-dees" placeholder="Enter DEES status or update"></textarea>
+   <label>Requirements</label>
+   <textarea id="fee-requirements" placeholder="Enter student requirements"></textarea>
+   <button class="btn" id="save-fee">Publish fees and updates</button>
+   <p id="fee-message" class="small"></p>
+  </div>
+
+  <div id="timetable-admin" class="admin-panel hidden">
+   <h3>Manage Class Timetables</h3>
+   <label>Class</label>
+   <select id="tt-class">
+    <option>S1</option><option>S2</option><option>S3</option>
+    <option>S4</option><option>S5</option><option>S6</option>
+   </select>
+   <label>Stream</label>
+   <select id="tt-stream">
+    <option>Green</option><option>Blue</option>
+    <option>Yellow</option><option>White</option>
+    <option>General</option>
+   </select>
+   <label>Timetable title</label>
+   <input id="tt-title" placeholder="e.g. Term 1 timetable">
+   <label>Timetable link</label>
+   <input id="tt-url" type="url" placeholder="Paste a public PDF or document link">
+   <label>Notes</label>
+   <textarea id="tt-notes" placeholder="Additional information"></textarea>
+   <button class="btn" id="save-timetable">Publish timetable</button>
+   <p id="tt-message" class="small"></p>
+  </div>
+
+  <div id="exam-admin" class="admin-panel hidden">
+   <h3>Publish Examination Papers</h3>
+   <label>Examination title</label>
+   <input id="exam-title" placeholder="e.g. Senior Three Biology Test">
+   <label>Class</label>
+   <select id="exam-class">
+    <option>S1</option><option>S2</option><option>S3</option>
+    <option>S4</option><option>S5</option><option>S6</option>
+   </select>
+   <label>Subject</label>
+   <input id="exam-subject" placeholder="Subject">
+   <label>Examination paper link</label>
+   <input id="exam-url" type="url" placeholder="Paste a public PDF or document link">
+   <label>Instructions</label>
+   <textarea id="exam-notes" placeholder="Examination instructions"></textarea>
+   <button class="btn" id="save-exam">Publish examination</button>
+   <p id="exam-message" class="small"></p>
+  </div>
+
+  <div id="news-admin" class="admin-panel hidden">
+   <h3>Manage News and Announcements</h3>
+   <label>Announcement title</label>
+   <input id="news-title" placeholder="Announcement title">
+   <label>Announcement details</label>
+   <textarea id="news-content" placeholder="Write the announcement"></textarea>
+   <label><input id="news-pinned" type="checkbox" style="width:auto"> Pin this announcement</label>
+   <button class="btn" id="save-news">Publish announcement</button>
+   <p id="news-message" class="small"></p>
+  </div>
+
+  <div id="admin-management" class="admin-panel hidden">
+   <h3>Administrator management</h3>
+   <p>The Headteacher is the Super Administrator. Other administrator accounts must be created through a secure trusted server process and then assigned permissions.</p>
+   <p class="small">Do not share administrator passwords. This dashboard does not create authentication accounts directly.</p>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p><strong>ST. MARY'S SECONDARY SCHOOL SANJE</strong></p>
+ <p>HE WHO STRUGGLES WINS</p>
+ <p>Committed to Excellence in Education</p>
+ <p>&copy; 2026 St. Mary's Secondary School Sanje. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/256748098496" class="floating-whatsapp"
+ target="_blank" rel="noopener" aria-label="Chat with the school on WhatsApp">☎</a>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+ apiKey: "AIzaSyB8fud7HsyRKLLVodQXBwLG7euWWPVlWjY",
+ authDomain: "smass-26626.firebaseapp.com",
+ projectId: "smass-26626",
+ storageBucket: "smass-26626.firebasestorage.app",
+ messagingSenderId: "616973067285",
+ appId: "1:616973067285:web:6364bf59775fd55d681a1c"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+const $ = id => document.getElementById(id);
+const safe = value => String(value ?? "").replace(/[&<>"']/g, c => ({
+ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
+const validUrl = value => {
+ try {
+  const u = new URL(value);
+  return u.protocol === "https:" ? u.href : "";
+ } catch { return ""; }
+};
+
+let currentAdmin = null;
+let adminData = null;
+
+function message(id, text) {
+ $(id).textContent = text;
+}
+
+function permitted(permission) {
+ if (!adminData || adminData.active !== true) return false;
+ return adminData.role === "super_admin" ||
+  (Array.isArray(adminData.permissions) && adminData.permissions.includes(permission));
+}
+
+function showPermissions() {
+ ["fees","timetable","exam","news","management"].forEach(id => {
+  const el = $(""+id+"-admin");
+  if (el) el.classList.add("hidden");
+ });
+ if (permitted("fees")) $("fees-admin").classList.remove("hidden");
+ if (permitted("timetables")) $("timetable-admin").classList.remove("hidden");
+ if (permitted("exams")) $("exam-admin").classList.remove("hidden");
+ if (permitted("announcements")) $("news-admin").classList.remove("hidden");
+ if (adminData.role === "super_admin") $("admin-management").classList.remove("hidden");
+}
+
+$("login-btn").addEventListener("click", async () => {
+ const email = $("login-email").value.trim();
+ const password = $("login-password").value;
+ if (!email || !password) return message("login-message","Enter your email and password.");
+ try {
+  await auth.signInWithEmailAndPassword(email,password);
+ } catch(error) {
+  message("login-message","Login failed: " + error.message);
+ }
+});
+
+$("logout-btn").addEventListener("click", () => auth.signOut());
+
+auth.onAuthStateChanged(async user => {
+ currentAdmin = user;
+ adminData = null;
+ $("dashboard").classList.add("hidden");
+ $("login-panel").classList.remove("hidden");
+
+ if (!user) return;
+
+ try {
+  const snap = await db.collection("admins").doc(user.uid).get();
+  if (!snap.exists || snap.data().active !== true) {
+   await auth.signOut();
+   message("login-message","This account has not been authorised by the Headteacher.");
+   return;
+  }
+  adminData = snap.data();
+  $("login-panel").classList.add("hidden");
+  $("dashboard").classList.remove("hidden");
+  $("admin-welcome").textContent = "Welcome, " + (adminData.name || user.email);
+  $("admin-role").textContent = "Role: " + adminData.role;
+  showPermissions();
+ } catch(error) {
+  message("login-message","Unable to verify administrator access. Check Firestore rules.");
+  await auth.signOut();
+ }
+});
+
+async function addRecord(collection,data,statusId) {
+ if (!currentAdmin) return message(statusId,"Please sign in.");
+ try {
+  data.createdAt = firebase.firestore.FieldValue.serverTimestamp();
+  data.createdBy = currentAdmin.uid;
+  await db.collection(collection).add(data);
+  message(statusId,"Published successfully.");
+ } catch(error) {
+  message(statusId,"Could not publish: " + error.message);
+ }
+}
+
+$("save-fee").addEventListener("click", () => {
+ if (!permitted("fees")) return;
+ const amount = Number($("fee-amount").value);
+ if (!Number.isFinite(amount) || amount < 0) return message("fee-message","Enter a valid amount.");
+ addRecord("fees",{
+  class:$("fee-class").value,
+  category:$("fee-category").value,
+  term:$("fee-term").value.trim(),
+  amount,
+  details:$("fee-details").value.trim(),
+  dees:$("fee-dees").value.trim(),
+  requirements:$("fee-requirements").value.trim()
+ },"fee-message");
+});
+
+$("save-timetable").addEventListener("click", () => {
+ if (!permitted("timetables")) return;
+ const url = validUrl($("tt-url").value.trim());
+ if (!url) return message("tt-message","Enter a valid public HTTPS timetable link.");
+ addRecord("timetables",{
+  class:$("tt-class").value,
+  stream:["S5","S6"].includes($("tt-class").value) ? "General" : $("tt-stream").value,
+  title:$("tt-title").value.trim(),
+  url,
+  notes:$("tt-notes").value.trim()
+ },"tt-message");
+});
+
+$("save-exam").addEventListener("click", () => {
+ if (!permitted("exams")) return;
+ const url = validUrl($("exam-url").value.trim());
+ if (!url) return message("exam-message","Enter a valid public HTTPS examination paper link.");
+ addRecord("exams",{
+  title:$("exam-title").value.trim(),
+  class:$("exam-class").value,
+  subject:$("exam-subject").value.trim(),
+  url,
+  notes:$("exam-notes").value.trim()
+ },"exam-message");
+});
+
+$("save-news").addEventListener("click", () => {
+ if (!permitted("announcements")) return;
+ addRecord("announcements",{
+  title:$("news-title").value.trim(),
+  content:$("news-content").value.trim(),
+  pinned:$("news-pinned").checked
+ },"news-message");
+});
+
+function listen(collection,callback) {
+ db.collection(collection).onSnapshot(snapshot => {
+  const records = snapshot.docs.map(doc => ({id:doc.id,...doc.data()}));
+  callback(records);
+ }, error => console.error("Loading "+collection,error));
+}
+
+listen("fees", records => {
+ $("fees-list").innerHTML = records.length ? records.map(r => `
+  <div class="card">
+   <h3>${safe(r.class)} — ${safe(r.category)}</h3>
+   <p><strong>${safe(r.term)}</strong></p>
+   <p>Fees: UGX ${Number(r.amount || 0).toLocaleString("en-UG")}</p>
+   <p>${safe(r.details)}</p>
+   ${r.dees ? `<p><strong>DEES status:</strong> ${safe(r.dees)}</p>` : ""}
+   ${r.requirements ? `<p><strong>Requirements:</strong> ${safe(r.requirements)}</p>` : ""}
+  </div>`).join("") : "<p>No fees information has been published yet.</p>";
+ const updates = records.filter(r => r.dees || r.requirements);
+ $("dees-list").innerHTML = updates.length ? updates.map(r =>
+  `<div class="news-item"><h3>${safe(r.class)} — ${safe(r.category)}</h3>
+  <p>${safe(r.dees)}</p><p>${safe(r.requirements)}</p></div>`
+ ).join("") : "No DEES updates have been published yet.";
+});
+
+let allTimetables = [];
+listen("timetables", records => {
+ allTimetables = records;
+ renderTimetables();
+});
+
+function renderTimetables() {
+ const cls = $("class-filter").value;
+ const stream = $("stream-filter").value;
+ const filtered = allTimetables.filter(r =>
+  (!cls || r.class === cls) && (!stream || r.stream === stream)
+ );
+ $("timetable-list").innerHTML = filtered.length ? filtered.map(r => `
+  <div class="card"><h3>${safe(r.class)} — ${safe
